@@ -1,4 +1,4 @@
-package com.clipboardtest.reusablecomponents;
+package com.clipboardtest.constants;
 
 public final class FrameworkConstants {
 
