@@ -10,11 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.Test;
 
-import com.clipboardtest.extentreports.ExtentReportLogger;
 import com.clipboardtest.reusablecomponents.PropertiesOperations;
-import com.clipboardtest.driver.DriverManager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -41,7 +38,6 @@ public final class Driver {
 					try {
 						DriverManager.setDriver(new RemoteWebDriver(new URL(remote_host), capability));
 					} catch (MalformedURLException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}
