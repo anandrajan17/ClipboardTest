@@ -1,7 +1,7 @@
 package com.clipboardtest.extentreports;
 
 
-
+//Extentreporter Logger 
 public final class ExtentReportLogger {
 	
 	private ExtentReportLogger() {}

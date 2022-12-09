@@ -2,21 +2,15 @@ package com.clipboardtest.reusablecomponents;
 
 import java.io.FileInputStream;
 import java.util.Properties;
-
 import com.clipboardtest.constants.FrameworkConstants;
-
 import io.opentelemetry.api.internal.StringUtils;
 
 public class PropertiesOperations {
 
-	
 	static Properties prop = new Properties();
-	
+
 	public static String getPropertyValueByKey(String key) {
-		//1. load data from properties file
-		//String propFilePath = System.getProperty("user.dir")+"/src/test/resources/config.properties";
-		//String propFilePath = System.getProperty(FrameworkConstants.getCONFIGFILEPATH());
-		//System.out.println(propFilePath+"anand1");
+		// 1. load data from properties file
 		FileInputStream fis;
 		try {
 			fis = new FileInputStream(FrameworkConstants.getCONFIGFILEPATH());
@@ -24,24 +18,18 @@ public class PropertiesOperations {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		//2. read data
+
+		// 2. read data
 		String value = prop.get(key).toString();
-		
-		if(StringUtils.isNullOrEmpty(value)) {
-			try {		
-				throw new Exception("Value is not specified for key: "+key + " in properties file.");
-			}catch(Exception e) {}
+
+		if (StringUtils.isNullOrEmpty(value)) {
+			try {
+				throw new Exception("Value is not specified for key: " + key + " in properties file.");
+			} catch (Exception e) {
+			}
 		}
-		
+
 		return value;
 	}
 
 }
-
-
-
-
-
-
-
