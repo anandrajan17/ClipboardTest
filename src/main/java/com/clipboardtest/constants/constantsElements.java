@@ -12,6 +12,10 @@ public class constantsElements {
     
     public static final String BRAND_SECTION = "Explore a Wide Selection of Smart TVs Online at Amazon India";
     
+    // FILTER PAGE
+    public static final String FILTER_OPTIONS = "[class='a-section a-spacing-small']";
+    public static final String FILTER_OPTIONS_CHECKBOXES = "#s-refinements > div:nth-child(@@ID@@) > ul [dir='auto']";
+    
     
 
 }

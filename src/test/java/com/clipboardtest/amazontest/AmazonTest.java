@@ -25,9 +25,10 @@ public class AmazonTest extends chromelauncher  {
 		
 		TestcaseExe.selectTVAppliance();
 		TestcaseExe.selectTelevison();
+		TestcaseExe.selectCheckoxIntoTitle("Brands", "Samsung");
 		
 
-		System.out.println("Testing");
+		System.out.println("Test has Executed successfully");
 
 	}
 
