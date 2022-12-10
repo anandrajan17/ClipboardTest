@@ -1,5 +1,8 @@
 package com.clipboardtest.amazontest;
 
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import com.clipboard.pages.AmazonHomePage;
@@ -11,7 +14,12 @@ import com.clipboardtest.extentreports.ExtentReprotAmazon;
 import com.clipboardtest.utils.Utilssupport;
 
 
-
+/**
+ * Testcase executor class run this to start the automation 
+ * 
+ * @author Anandha
+ *
+ */
 public class AmazonTest extends chromelauncher  {
 
 	private AmazonTest (){
@@ -40,6 +48,16 @@ public class AmazonTest extends chromelauncher  {
 		ResultExe.selectResultByIndex(0);
 		UtilExe.switchTab(1);
 		
+		//to get the Details of the item 
+		List<WebElement> bullets = DetailExe.getBulletList();
+		for (int i = 0; i < bullets.size(); i++) {
+			System.out.println("*" + bullets.get(i).getText());
+		//log.info("*" + bullets.get(i).getText());
+			  ExtentReprotAmazon.reprottest.pass("*" + bullets.get(i).getText());
+			 
+
+		
+		}
 		
 
 		System.out.println("Test has Executed successfully");

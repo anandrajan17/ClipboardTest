@@ -9,7 +9,11 @@ import com.clipboardtest.driver.DriverManager;
 import com.clipboardtest.extentreports.ExtentReprotAmazon;
 import com.clipboardtest.utils.Utilssupport;
 
-
+/**
+ * Amazon TV details
+ * @author Anandha
+ *
+ */
 
 public class AmazonTvDetails {
 	

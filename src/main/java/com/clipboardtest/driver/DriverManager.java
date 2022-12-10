@@ -1,9 +1,15 @@
 package com.clipboardtest.driver;
 import org.openqa.selenium.WebDriver;
 
+/**
+ * DriverManager class to invoke webdriver ,url and Quit browser 
+ * @author Anand
+ *
+ */
+
 public final class DriverManager {
 
-	//Driver function to get,set Url,Unload Driver 
+	
 	private DriverManager() {
 
 	}

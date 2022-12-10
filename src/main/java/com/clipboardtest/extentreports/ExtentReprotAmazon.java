@@ -10,7 +10,12 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-//Extent Reporter 
+/**
+ * Extent Report generator where theme can be changed and auto display of the browser after the test code execution
+ * @author apple
+ *
+ */
+		
 public final class ExtentReprotAmazon {
 
 	private ExtentReprotAmazon() {

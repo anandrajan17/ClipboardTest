@@ -1,7 +1,11 @@
 package com.clipboardtest.extentreports;
 
 
-//Extentreporter Logger 
+/**
+ * Extenent ReportLogger for Pass,Fail and Skip test cases 
+ * @author Anandha
+ *
+ */
 public final class ExtentReportLogger {
 	
 	private ExtentReportLogger() {}

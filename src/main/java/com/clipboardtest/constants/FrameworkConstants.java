@@ -1,6 +1,13 @@
 package com.clipboardtest.constants;
 
+
+/**
+ * Framework consatnts to mention path of the config file
+ * @author Anandha
+ */
+
 public final class FrameworkConstants {
+
 
 	private FrameworkConstants() {
 

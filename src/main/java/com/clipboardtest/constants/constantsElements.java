@@ -1,5 +1,11 @@
 package com.clipboardtest.constants;
 
+/**
+ * Constant files for the elements for Amazon.in 
+ * @author Anand
+ *
+ */
+
 public class constantsElements {
 
 	// HOME PAGE

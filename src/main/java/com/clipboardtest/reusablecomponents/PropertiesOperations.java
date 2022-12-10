@@ -4,7 +4,11 @@ import java.io.FileInputStream;
 import java.util.Properties;
 import com.clipboardtest.constants.FrameworkConstants;
 import io.opentelemetry.api.internal.StringUtils;
-
+/**
+ * Class to read the config properties file and then read the data from the config file
+ * @author Anandha
+ *
+ */
 public class PropertiesOperations {
 
 	static Properties prop = new Properties();
