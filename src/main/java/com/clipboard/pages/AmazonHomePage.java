@@ -17,4 +17,14 @@ public class AmazonHomePage {
 		ExtentReportLogger.pass("All Navigation is button Clicked");
 	}
 
+	public void selectTVAppliance() {
+		
+		utils.hoverAndClick(By.linkText(constantsElements.TV_APPLIANCES_ELECTRONICS));	
+		ExtentReportLogger.pass("TV & Electronics and Appliance is selected");
+	}
+	
+	public void selectTelevison() {
+		utils.hoverAndClick(By.linkText(constantsElements.TELEVISIONS));
+        ExtentReportLogger.pass("Televison is selected");
+}
 }

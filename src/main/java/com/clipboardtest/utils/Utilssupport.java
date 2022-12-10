@@ -20,4 +20,11 @@ public class Utilssupport {
 		waitForElementToBePresent(input);
 		DriverManager.getDriver().findElement(input).click();
 	}
+	
+	public void hoverAndClick(By input) {
+		Actions action = new Actions(DriverManager.getDriver());
+		waitForElementToBePresent(input);
+		action.moveToElement(DriverManager.getDriver().findElement(input)).click().build().perform();
+	}
+
 }

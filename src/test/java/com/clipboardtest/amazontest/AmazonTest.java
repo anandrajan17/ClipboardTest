@@ -16,12 +16,16 @@ public class AmazonTest extends chromelauncher  {
 
 	@Test
 
-	public void amazon_launch_title() {
+	public void amazon_test() {
 		
 		ExtentReprotAmazon.testcase("Amazon TV Test");
 		
 		AmazonHomePage TestcaseExe = new AmazonHomePage();
 		TestcaseExe.clickHamburger();
+		
+		TestcaseExe.selectTVAppliance();
+		TestcaseExe.selectTelevison();
+		
 
 		System.out.println("Testing");
 
