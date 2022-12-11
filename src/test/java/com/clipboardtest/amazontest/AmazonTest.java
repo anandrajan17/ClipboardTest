@@ -41,6 +41,7 @@ public class AmazonTest extends chromelauncher {
 		AmazonTvDetails DetailExe = new AmazonTvDetails();
 
 		try {
+			
 			TestcaseExe.clickHamburger();
 			TestcaseExe.selectTVAppliance();
 			TestcaseExe.selectTelevison();
@@ -52,8 +53,6 @@ public class AmazonTest extends chromelauncher {
 			// to get the Details of the item
 			List<WebElement> bullets = DetailExe.getBulletList();
 			for (int i = 0; i < bullets.size(); i++) {
-				System.out.println("*" + bullets.get(i).getText());
-				// log.info("*" + bullets.get(i).getText());
 				ExtentReprotAmazon.reprottest.pass("*" + bullets.get(i).getText());
 
 			}
@@ -61,8 +60,6 @@ public class AmazonTest extends chromelauncher {
 			Assert.fail(e + "Test Case have Failed");
 
 		}
-
-		System.out.println("Test has Executed successfully");
 
 	}
 
