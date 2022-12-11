@@ -1,10 +1,13 @@
 package com.clipboardtest.amazontest;
 
-import java.util.List;
+import org.testng.annotations.Test;
+import org.testng.Assert;
+import org.testng.AssertJUnit;
+import static org.testng.Assert.assertTrue;
 
+import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
-
 import com.clipboard.pages.AmazonHomePage;
 import com.clipboard.pages.AmazonTVPage;
 import com.clipboard.pages.AmazonTvDetails;
@@ -39,14 +42,13 @@ public class AmazonTest extends chromelauncher {
 
 		try {
 			TestcaseExe.clickHamburger();
-
 			TestcaseExe.selectTVAppliance();
 			TestcaseExe.selectTelevison();
-			//TestcaseExe.selectCheckoxIntoTitle("Brands", "Samsung");
+			TestcaseExe.selectCheckoxIntoTitle("Brands", "Samsung");
 			FilterExe.sortByPriceHighToLow();
 			ResultExe.selectResultByIndex(0);
 			UtilExe.switchTab(1);
-
+			assertTrue(DetailExe.getAboutThisItemSectionText().equalsIgnoreCase("About this item"),"About this item section was not found");
 			// to get the Details of the item
 			List<WebElement> bullets = DetailExe.getBulletList();
 			for (int i = 0; i < bullets.size(); i++) {
@@ -56,7 +58,7 @@ public class AmazonTest extends chromelauncher {
 
 			}
 		} catch (Exception e) {
-			ExtentReprotAmazon.reprottest.fail(e + "Test Case have Failed");
+			Assert.fail(e + "Test Case have Failed");
 
 		}
 

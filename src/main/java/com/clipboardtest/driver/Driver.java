@@ -48,6 +48,7 @@ public final class Driver {
 		if (Objects.isNull(DriverManager.getDriver())) {
 			if (browser.equalsIgnoreCase("chrome")) {
 				WebDriverManager.chromedriver().setup();
+				System.out.println(runmode +"anand");
 				if (runmode.equalsIgnoreCase("remote")) {
 					DesiredCapabilities capability = new DesiredCapabilities();
 					capability.setBrowserName(browser);
