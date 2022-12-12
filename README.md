@@ -14,3 +14,16 @@ Open Terminal, navigate the project root. Assuming the above dependencies are in
 * Page structure can be seen following inheritance (Base page contains header/menu which is present on all pages) 
 * Intergation with extent reports for better visual reporting.
 * javadoc added 
+* Docker Image support added 
+
+##Steps to create a Docker Image and Run 
+make sure in cofig properties runmode = remote 
+make sure docker is installed  
+Makre sure chrome latest docker image is pulled 
+
+* Download the project folder
+* Navigate to project folder in Terminal/CMD
+* Enter this command 'Docker build -t clipboardtestimage .'
+* Run this command  'docker run -d -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm selenium/standalone-chrome '
+* docker run -d --network="host" clipboardtestimage mvn -f  /home/SeleniumTestFramework/pom.xml clean test -Dbrowser="chrome" 
+* Enter docker logs "container image generated" you can view the result in logs
